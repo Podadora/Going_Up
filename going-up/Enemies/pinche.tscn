@@ -1,3 +1,25 @@
-[gd_scene format=3 uid="uid://b76v3piu8coty"]
+[gd_scene load_steps=2 format=3 uid="uid://b76v3piu8coty"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f3r5g"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
 
 [node name="Pinche" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(120.572, 94.6739)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D"]
+sprite_frames = SubResource("SpriteFrames_f3r5g")
+animation = &"new_animation"
