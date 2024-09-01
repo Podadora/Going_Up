@@ -1,0 +1,29 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1725154944
+.gitignore.txt::TextFile::-1::1725139243::0::1::::<><>::
+Coin.tscn::PackedScene::232014832180800843::1725136795::0::1::::<><>::uid://bsawv5yyc31y2::::res://levels/Coin Sprite/Coin1.png<>uid://bxu1dqid52ybx::::res://levels/Coin Sprite/Coin2.png<>uid://cuk8f37bjx0yk::::res://levels/Coin Sprite/Coin3.png<>uid://dry8xsureps70::::res://levels/Coin Sprite/Coin4.png<>uid://cbwkl7nhgww0g::::res://levels/Coin Sprite/Coin5.png<>uid://5lwrgw3yhfkt::::res://levels/Coin Sprite/Coin6.png<>uid://cn6cgg2uoqgv5::::res://levels/Coin Sprite/Coin7.png
+icon.svg::CompressedTexture2D::5671944564896938250::1725136795::1725141125::1::::<><>::
+level0.tscn::PackedScene::1164203174435820473::1725146765::0::1::::<><>::uid://bgvk3weoda3fn::::res://tileset/simple.png
+::res://Enemies/::1725142425
+pinche.tscn::PackedScene::4697785250725013750::1725142425::0::1::::<><>::
+::res://levels/::1725142425
+Coin.tscn::PackedScene::854253631561246853::1725136795::0::1::::<><>::
+lvl_1.tscn::PackedScene::8282216320275409230::1725142425::0::1::::<><>::uid://bmfdnj0gwoqak::::res://tileset/tileset_level_1.png<>uid://b2wetb2xeavl5::::res://player/player.tscn
+::res://levels/Coin Sprite/::1725141125
+Coin1.png::CompressedTexture2D::3651194758560613555::1725136795::1725141125::1::::<><>::
+Coin2.png::CompressedTexture2D::4043636494552207153::1725136795::1725141125::1::::<><>::
+Coin3.png::CompressedTexture2D::6199276127564206854::1725136795::1725141125::1::::<><>::
+Coin4.png::CompressedTexture2D::8404063170139144185::1725136795::1725141125::1::::<><>::
+Coin5.png::CompressedTexture2D::4889075036430787040::1725136795::1725141125::1::::<><>::
+Coin6.png::CompressedTexture2D::2129739947203217715::1725136795::1725141125::1::::<><>::
+Coin7.png::CompressedTexture2D::5749424551583312288::1725136795::1725141125::1::::<><>::
+::res://player/::1725141125
+player-idle.png::CompressedTexture2D::6903632475429180621::1725136795::1725141125::1::::<><>::
+player-jump.png::CompressedTexture2D::4491101359453513580::1725136795::1725141125::1::::<><>::
+player-run.png::CompressedTexture2D::289843908970993126::1725136795::1725141125::1::::<><>::
+player-stand.png::CompressedTexture2D::8348568765038898066::1725136795::1725141125::1::::<><>::
+player.tscn::PackedScene::4327212665848003528::1725136795::0::1::::<><>::uid://c5mf2248su4q0::::res://player/player-idle.png<>res://player/player_1.gd<>uid://eenxl8lbii0e::::res://player/player-run.png<>uid://b48r1vofhujxk::::res://player/player-jump.png<>uid://dq7dyciebx0ok::::res://player/player-stand.png
+player_1.gd::GDScript::-1::1725136795::0::1::::<>CharacterBody2D<>::
+::res://tileset/::1725141125
+simple.png::CompressedTexture2D::2851564012846610711::1725133607::1725141125::1::::<><>::
+tileset_level_1.png::CompressedTexture2D::3239214574051693978::1725136795::1725141125::1::::<><>::
