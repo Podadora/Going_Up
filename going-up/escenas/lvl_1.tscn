@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=4 uid="uid://dp875matjmapa"]
 
-[ext_resource type="Texture2D" uid="uid://bmfdnj0gwoqak" path="res://tileset/tileset_level_1.png" id="1_ieqjl"]
-[ext_resource type="PackedScene" uid="uid://b2wetb2xeavl5" path="res://player/player.tscn" id="2_fkp0i"]
+[ext_resource type="Texture2D" path="res://tileset/tileset_level_1.png" id="1_ieqjl"]
+[ext_resource type="PackedScene" uid="uid://b2wetb2xeavl5" path="res://escenas/player.tscn" id="2_fkp0i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4qo7p"]
 resource_name = "Terreno"

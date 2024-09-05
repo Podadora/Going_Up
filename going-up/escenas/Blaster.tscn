@@ -1,12 +1,13 @@
-[gd_scene load_steps=17 format=3 uid="uid://dknirpi2iepn"]
+[gd_scene load_steps=18 format=3 uid="uid://dknirpi2iepn"]
 
-[ext_resource type="Texture2D" uid="uid://bsawv5yyc31y2" path="res://levels/Coin Sprite/Coin1.png" id="1_4hm3h"]
-[ext_resource type="Texture2D" uid="uid://bxu1dqid52ybx" path="res://levels/Coin Sprite/Coin2.png" id="2_tb2s0"]
-[ext_resource type="Texture2D" uid="uid://cuk8f37bjx0yk" path="res://levels/Coin Sprite/Coin3.png" id="3_peqfy"]
-[ext_resource type="Texture2D" uid="uid://dry8xsureps70" path="res://levels/Coin Sprite/Coin4.png" id="4_ceclg"]
-[ext_resource type="Texture2D" uid="uid://cbwkl7nhgww0g" path="res://levels/Coin Sprite/Coin5.png" id="5_3l2vq"]
-[ext_resource type="Texture2D" uid="uid://5lwrgw3yhfkt" path="res://levels/Coin Sprite/Coin6.png" id="6_nqbm2"]
-[ext_resource type="Texture2D" uid="uid://cn6cgg2uoqgv5" path="res://levels/Coin Sprite/Coin7.png" id="7_u7v08"]
+[ext_resource type="Texture2D" uid="uid://bsawv5yyc31y2" path="res://assets/levels/Coin Sprite/Coin1.png" id="1_4hm3h"]
+[ext_resource type="Script" path="res://scripts/coin.gd" id="1_ho53k"]
+[ext_resource type="Texture2D" uid="uid://bxu1dqid52ybx" path="res://assets/levels/Coin Sprite/Coin2.png" id="2_tb2s0"]
+[ext_resource type="Texture2D" uid="uid://cuk8f37bjx0yk" path="res://assets/levels/Coin Sprite/Coin3.png" id="3_peqfy"]
+[ext_resource type="Texture2D" uid="uid://dry8xsureps70" path="res://assets/levels/Coin Sprite/Coin4.png" id="4_ceclg"]
+[ext_resource type="Texture2D" uid="uid://cbwkl7nhgww0g" path="res://assets/levels/Coin Sprite/Coin5.png" id="5_3l2vq"]
+[ext_resource type="Texture2D" uid="uid://5lwrgw3yhfkt" path="res://assets/levels/Coin Sprite/Coin6.png" id="6_nqbm2"]
+[ext_resource type="Texture2D" uid="uid://cn6cgg2uoqgv5" path="res://assets/levels/Coin Sprite/Coin7.png" id="7_u7v08"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r0dwa"]
 atlas = ExtResource("1_4hm3h")
@@ -69,10 +70,13 @@ animations = [{
 radius = 6.08276
 
 [node name="Coin" type="Node2D"]
+script = ExtResource("1_ho53k")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_qn6ss")
-frame_progress = 0.759926
+autoplay = "default"
+frame = 5
+frame_progress = 0.836222
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_jbg8j")

@@ -1,0 +1,185 @@
+[gd_scene load_steps=6 format=3 uid="uid://dkdpnn4e5npde"]
+
+[ext_resource type="Texture2D" uid="uid://qfcrmkbfp0lv" path="res://assets/tileset/menu.png" id="1_0nkfx"]
+[ext_resource type="Texture2D" uid="uid://b2o0sag1vbc37" path="res://assets/tileset/tileset_level_11.png" id="1_j72vg"]
+[ext_resource type="PackedScene" uid="uid://b2wetb2xeavl5" path="res://escenas/player.tscn" id="2_xpsgd"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_31edq"]
+texture = ExtResource("1_j72vg")
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+8:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+16:1/0 = 0
+17:1/0 = 0
+18:1/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+8:3/0 = 0
+10:3/0 = 0
+12:3/0 = 0
+14:3/0 = 0
+16:3/0 = 0
+17:3/0 = 0
+19:3/0 = 0
+20:3/0 = 0
+22:3/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+8:4/0 = 0
+10:4/0 = 0
+16:4/0 = 0
+17:4/0 = 0
+19:4/0 = 0
+20:4/0 = 0
+22:4/0 = 0
+1:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+6:6/0 = 0
+8:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+16:6/0 = 0
+21:6/0 = 0
+1:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+6:7/0 = 0
+8:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+15:7/0 = 0
+16:7/0 = 0
+18:7/0 = 0
+19:7/0 = 0
+1:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+16:8/0 = 0
+17:8/0 = 0
+18:8/0 = 0
+19:8/0 = 0
+21:8/0 = 0
+22:8/0 = 0
+3:9/0 = 0
+5:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+16:9/0 = 0
+18:9/0 = 0
+19:9/0 = 0
+21:9/0 = 0
+22:9/0 = 0
+3:10/0 = 0
+5:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+13:10/0 = 0
+14:10/0 = 0
+15:10/0 = 0
+16:10/0 = 0
+18:10/0 = 0
+19:10/0 = 0
+13:11/0 = 0
+14:11/0 = 0
+15:11/0 = 0
+16:11/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_k2thl"]
+sources/0 = SubResource("TileSetAtlasSource_31edq")
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+texture_filter = 1
+position = Vector2(182, 102)
+tile_map_data = PackedByteArray(0, 0, 4, 0, 4, 0, 0, 0, 14, 0, 7, 0, 0, 0, 5, 0, 4, 0, 0, 0, 14, 0, 7, 0, 0, 0, 6, 0, 4, 0, 0, 0, 14, 0, 7, 0, 0, 0, 7, 0, 4, 0, 0, 0, 14, 0, 7, 0, 0, 0, 8, 0, 4, 0, 0, 0, 14, 0, 7, 0, 0, 0)
+tile_set = SubResource("TileSet_k2thl")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(182, 102)
+
+[node name="Menu" type="Sprite2D" parent="."]
+position = Vector2(174, 101)
+scale = Vector2(0.599999, 0.52)
+texture = ExtResource("1_0nkfx")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.234
+anchor_top = 0.072
+anchor_right = 0.837
+anchor_bottom = 0.356
+offset_left = 0.119995
+offset_top = 0.039999
+offset_right = 0.160004
+offset_bottom = -0.0800018
+text = "selecciona el mapa weon"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AMI" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.341
+anchor_top = 0.417
+anchor_right = 0.366
+anchor_bottom = 0.461
+offset_left = -27.12
+offset_top = -2.06001
+offset_right = 37.88
+offset_bottom = 42.02
+text = "AMI"
+
+[node name="MATI" type="Button" parent="."]
+layout_mode = 0
+offset_left = 212.0
+offset_top = 63.0
+offset_right = 260.0
+offset_bottom = 94.0
+text = "MATI"
+
+[node name="EMA" type="Button" parent="."]
+layout_mode = 0
+offset_left = 215.0
+offset_top = 123.0
+offset_right = 258.0
+offset_bottom = 154.0
+text = "EMA"
+
+[node name="Player_1" parent="." instance=ExtResource("2_xpsgd")]
+position = Vector2(293, 170)
+
+[connection signal="pressed" from="AMI" to="Player_1" method="_on_ami_pressed"]

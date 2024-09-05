@@ -8,6 +8,7 @@ var current_state
 
 func _ready() -> void:
 	current_state = State.Idle
+	var mi_score = Global.score
 
 func _physics_process(delta: float) -> void:
 	_gravedad(delta)
@@ -41,6 +42,10 @@ func _running(delta:float) -> void:
 
 
 
+
+
+
+
 func _jumping(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_up") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
@@ -56,3 +61,9 @@ func _animations(delta: float) -> void:
 		animated_sprite_2d.play("stand")
 	elif current_state == State.Idle:
 		animated_sprite_2d.play("idle")
+
+
+
+
+func _on_ami_pressed() -> void:
+	pass # Replace with function body.

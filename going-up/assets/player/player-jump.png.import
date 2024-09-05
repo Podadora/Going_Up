@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5lwrgw3yhfkt"
-path="res://.godot/imported/Coin6.png-4704abf487ba53f187f04fc7177e1f36.ctex"
+uid="uid://b48r1vofhujxk"
+path="res://.godot/imported/player-jump.png-669db47504c1cd5aaa25a09b6ca5aba3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://levels/Coin Sprite/Coin6.png"
-dest_files=["res://.godot/imported/Coin6.png-4704abf487ba53f187f04fc7177e1f36.ctex"]
+source_file="res://assets/player/player-jump.png"
+dest_files=["res://.godot/imported/player-jump.png-669db47504c1cd5aaa25a09b6ca5aba3.ctex"]
 
 [params]
 
