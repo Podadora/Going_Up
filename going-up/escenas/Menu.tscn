@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dkdpnn4e5npde"]
+[gd_scene load_steps=6 format=4 uid="uid://dkdpnn4e5npde"]
 
 [ext_resource type="Texture2D" uid="uid://qfcrmkbfp0lv" path="res://assets/tileset/menu.png" id="1_0nkfx"]
 [ext_resource type="Texture2D" uid="uid://b2o0sag1vbc37" path="res://assets/tileset/tileset_level_11.png" id="1_j72vg"]
@@ -63,17 +63,25 @@ texture = ExtResource("1_j72vg")
 10:7/0 = 0
 11:7/0 = 0
 13:7/0 = 0
+13:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 14:7/0 = 0
+14:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 15:7/0 = 0
+15:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 16:7/0 = 0
+16:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 18:7/0 = 0
 19:7/0 = 0
 1:8/0 = 0
 12:8/0 = 0
 13:8/0 = 0
+13:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 14:8/0 = 0
+14:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 15:8/0 = 0
+15:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 16:8/0 = 0
+16:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 17:8/0 = 0
 18:8/0 = 0
 19:8/0 = 0
@@ -86,9 +94,13 @@ texture = ExtResource("1_j72vg")
 10:9/0 = 0
 11:9/0 = 0
 13:9/0 = 0
+13:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 14:9/0 = 0
+14:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 15:9/0 = 0
+15:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 16:9/0 = 0
+16:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 18:9/0 = 0
 19:9/0 = 0
 21:9/0 = 0
@@ -100,9 +112,13 @@ texture = ExtResource("1_j72vg")
 10:10/0 = 0
 11:10/0 = 0
 13:10/0 = 0
+13:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 14:10/0 = 0
+14:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 15:10/0 = 0
+15:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 16:10/0 = 0
+16:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 18:10/0 = 0
 19:10/0 = 0
 13:11/0 = 0
@@ -111,6 +127,7 @@ texture = ExtResource("1_j72vg")
 16:11/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_k2thl"]
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_31edq")
 
 [node name="Menu" type="Control"]
@@ -124,7 +141,7 @@ grow_vertical = 2
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 texture_filter = 1
 position = Vector2(182, 102)
-tile_map_data = PackedByteArray(0, 0, 4, 0, 4, 0, 0, 0, 14, 0, 7, 0, 0, 0, 5, 0, 4, 0, 0, 0, 14, 0, 7, 0, 0, 0, 6, 0, 4, 0, 0, 0, 14, 0, 7, 0, 0, 0, 7, 0, 4, 0, 0, 0, 14, 0, 7, 0, 0, 0, 8, 0, 4, 0, 0, 0, 14, 0, 7, 0, 0, 0)
+tile_map_data = PackedByteArray("AAAEAAQAAAAOAAcAAAAFAAQAAAAOAAcAAAAGAAQAAAAOAAcAAAAHAAQAAAAOAAcAAAAIAAQAAAAOAAcAAAACAAUAAAAOAAcAAAADAAUAAAAOAAcAAAAEAAUAAAAOAAcAAAAFAAUAAAAOAAcAAAAGAAUAAAAOAAcAAAAHAAUAAAAOAAcAAAAIAAUAAAAOAAcAAAAJAAUAAAAOAAcAAAABAAUAAAAOAAcAAAAAAAUAAAAOAAcAAAD//wUAAAAOAAcAAAD+/wUAAAAOAAcAAAD9/wUAAAAOAAcAAAD8/wUAAAAOAAcAAAD7/wUAAAAOAAcAAAD6/wUAAAAOAAcAAAD5/wUAAAAOAAcAAAD4/wUAAAAOAAcAAAD3/wUAAAAOAAcAAAD2/wUAAAAOAAcAAAD1/wUAAAAOAAcAAAD1/wQAAAAOAAcAAAD1/wMAAAAOAAcAAAD1/wIAAAAOAAcAAAD1/wEAAAAOAAcAAAD1/wAAAAAOAAcAAAD1////AAAOAAcAAAD1//7/AAAOAAcAAAD1//3/AAAOAAcAAAD1//z/AAAOAAcAAAD1//v/AAAOAAcAAAD1//r/AAAOAAcAAAAJAAQAAAAOAAcAAAAJAAMAAAAOAAcAAAAJAAIAAAAOAAcAAAAJAAEAAAAOAAcAAAAJAAAAAAAOAAcAAAAJAP//AAAOAAcAAAAJAP7/AAAOAAcAAAAJAP3/AAAOAAcAAAAJAPz/AAAOAAcAAAAJAPv/AAAOAAcAAAAJAPr/AAAOAAcAAAA=")
 tile_set = SubResource("TileSet_k2thl")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -183,3 +200,5 @@ text = "EMA"
 position = Vector2(293, 170)
 
 [connection signal="pressed" from="AMI" to="Player_1" method="_on_ami_pressed"]
+[connection signal="pressed" from="MATI" to="Player_1" method="_on_mati_pressed"]
+[connection signal="pressed" from="EMA" to="Player_1" method="_on_ema_pressed"]

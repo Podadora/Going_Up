@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=4 uid="uid://u4hj0r7xfdce"]
+
+[ext_resource type="Texture2D" uid="uid://bgvk3weoda3fn" path="res://assets/tileset/simple.png" id="1_qksn4"]
+[ext_resource type="PackedScene" uid="uid://b2wetb2xeavl5" path="res://escenas/player.tscn" id="2_ykcy7"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ms335"]
+texture = ExtResource("1_qksn4")
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:1/0 = 0
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:2/0 = 0
+7:3/0 = 0
+7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_7f8t4"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_ms335")
+
+[node name="Mati" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+physics_interpolation_mode = 1
+tile_map_data = PackedByteArray("AAABAAkAAAACAAAAAAABAAgAAAACAAAAAAACAAgAAAACAAAAAAADAAgAAAACAAAAAAAEAAgAAAACAAAAAAAFAAgAAAACAAAAAAAGAAgAAAACAAAAAAAHAAgAAAACAAAAAAAIAAgAAAACAAAAAAAJAAgAAAACAAAAAAAKAAgAAAACAAAAAAALAAgAAAACAAAAAAAMAAgAAAACAAAAAAANAAgAAAACAAAAAAAOAAgAAAACAAAAAAAPAAgAAAACAAAAAAAQAAgAAAACAAAAAAARAAgAAAACAAAAAAASAAgAAAACAAAAAAATAAgAAAACAAAAAAAUAAgAAAACAAAAAAAVAAgAAAACAAAAAAAWAAgAAAACAAAAAAAXAAgAAAACAAAAAAAYAAgAAAACAAAAAAAZAAgAAAACAAAAAAAaAAgAAAACAAAAAAAbAAgAAAACAAAAAAAcAAgAAAACAAAAAAAdAAgAAAACAAAAAAAeAAgAAAACAAAAAAAfAAgAAAACAAAAAAAgAAgAAAACAAAAAAAhAAkAAAACAAAAAAAiAAkAAAACAAAAAAAjAAkAAAACAAAAAAAkAAkAAAACAAAAAAAlAAkAAAACAAAAAAAmAAkAAAACAAAAAAAnAAkAAAACAAAAAAAoAAkAAAACAAAAAAApAAkAAAACAAAAAAAqAAkAAAACAAAAAAArAAkAAAACAAAAAAAsAAkAAAACAAAAAAAtAAkAAAACAAAAAAAuAAkAAAACAAAAAAAvAAkAAAACAAAAAAAwAAkAAAACAAAAAAAxAAkAAAACAAAAAAAyAAkAAAACAAAAAAAzAAkAAAACAAAAAAA0AAkAAAACAAAAAAA1AAkAAAACAAAAAAA2AAkAAAACAAAAAAA3AAkAAAACAAAAAAAjAAYAAAACAAAAAAAkAAYAAAACAAAAAAAlAAYAAAACAAAAAAApAAUAAAACAAAAAAAqAAUAAAACAAAAAAArAAUAAAACAAAAAAAsAAUAAAACAAAAAAAuAAUAAAACAAAAAAAvAAUAAAACAAAAAAAwAAUAAAACAAAAAAAxAAUAAAACAAAAAAAbAAMAAAACAAAAAAAaAAMAAAACAAAAAAAZAAMAAAACAAAAAAAYAAMAAAACAAAAAAAXAAMAAAACAAAAAAAWAAMAAAACAAAAAAAVAAMAAAACAAAAAAAUAAMAAAACAAAAAAAPAAIAAAACAAAAAAAOAAIAAAACAAAAAAANAAIAAAACAAAAAAAMAAIAAAACAAAAAAALAAIAAAACAAAAAAAGAAUAAAACAAAAAAAPAAYAAAACAAAAAAA=")
+tile_set = SubResource("TileSet_7f8t4")
+
+[node name="Player_1" parent="." instance=ExtResource("2_ykcy7")]
+position = Vector2(55, 113)
