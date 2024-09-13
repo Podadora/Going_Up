@@ -1,8 +1,9 @@
 [gd_scene load_steps=10 format=4 uid="uid://qt7iyfk6e7e8"]
 
-[ext_resource type="Texture2D" uid="uid://bgvk3weoda3fn" path="res://assets/tileset/simple.png" id="1_2of2f"]
-[ext_resource type="PackedScene" uid="uid://b2wetb2xeavl5" path="res://escenas/player.tscn" id="2_asr6o"]
-[ext_resource type="PackedScene" uid="uid://dknirpi2iepn" path="res://escenas/Blaster.tscn" id="3_ikp5u"]
+[ext_resource type="Texture2D" uid="uid://bgvk3weoda3fn" path="res://going-up/assets/tileset/simple.png" id="1_2of2f"]
+[ext_resource type="PackedScene" path="res://escenas/player.tscn" id="2_asr6o"]
+[ext_resource type="PackedScene" path="res://escenas/Blaster.tscn" id="3_ikp5u"]
+
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_abstj"]
 tile_data = PackedInt32Array(0, 131072, 0, 1, 131072, 0, 2, 131072, 0)
