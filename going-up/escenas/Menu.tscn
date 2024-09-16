@@ -144,13 +144,12 @@ position = Vector2(182, 102)
 tile_map_data = PackedByteArray("AAAEAAQAAAAOAAcAAAAFAAQAAAAOAAcAAAAGAAQAAAAOAAcAAAAHAAQAAAAOAAcAAAAIAAQAAAAOAAcAAAACAAUAAAAOAAcAAAADAAUAAAAOAAcAAAAEAAUAAAAOAAcAAAAFAAUAAAAOAAcAAAAGAAUAAAAOAAcAAAAHAAUAAAAOAAcAAAAIAAUAAAAOAAcAAAAJAAUAAAAOAAcAAAABAAUAAAAOAAcAAAAAAAUAAAAOAAcAAAD//wUAAAAOAAcAAAD+/wUAAAAOAAcAAAD9/wUAAAAOAAcAAAD8/wUAAAAOAAcAAAD7/wUAAAAOAAcAAAD6/wUAAAAOAAcAAAD5/wUAAAAOAAcAAAD4/wUAAAAOAAcAAAD3/wUAAAAOAAcAAAD2/wUAAAAOAAcAAAD1/wUAAAAOAAcAAAD1/wQAAAAOAAcAAAD1/wMAAAAOAAcAAAD1/wIAAAAOAAcAAAD1/wEAAAAOAAcAAAD1/wAAAAAOAAcAAAD1////AAAOAAcAAAD1//7/AAAOAAcAAAD1//3/AAAOAAcAAAD1//z/AAAOAAcAAAD1//v/AAAOAAcAAAD1//r/AAAOAAcAAAAJAAQAAAAOAAcAAAAJAAMAAAAOAAcAAAAJAAIAAAAOAAcAAAAJAAEAAAAOAAcAAAAJAAAAAAAOAAcAAAAJAP//AAAOAAcAAAAJAP7/AAAOAAcAAAAJAP3/AAAOAAcAAAAJAPz/AAAOAAcAAAAJAPv/AAAOAAcAAAAJAPr/AAAOAAcAAAA=")
 tile_set = SubResource("TileSet_k2thl")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(182, 102)
-
 [node name="Menu" type="Sprite2D" parent="."]
 position = Vector2(174, 101)
 scale = Vector2(0.599999, 0.52)
 texture = ExtResource("1_0nkfx")
+
+[node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -159,10 +158,10 @@ anchor_left = 0.234
 anchor_top = 0.072
 anchor_right = 0.837
 anchor_bottom = 0.356
-offset_left = 0.119995
-offset_top = 0.039999
-offset_right = 0.160004
-offset_bottom = -0.0800018
+offset_left = -505.52
+offset_top = 33.16
+offset_right = -505.48
+offset_bottom = 33.04
 text = "selecciona el mapa weon"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -174,10 +173,10 @@ anchor_left = 0.341
 anchor_top = 0.417
 anchor_right = 0.366
 anchor_bottom = 0.461
-offset_left = -27.12
-offset_top = -2.06001
-offset_right = 37.88
-offset_bottom = 42.02
+offset_left = -365.48
+offset_top = -232.24
+offset_right = -300.48
+offset_bottom = -188.16
 text = "AMI"
 
 [node name="MATI" type="Button" parent="."]
