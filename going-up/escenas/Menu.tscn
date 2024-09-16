@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=4 uid="uid://dkdpnn4e5npde"]
+[gd_scene load_steps=7 format=4 uid="uid://dkdpnn4e5npde"]
 
 [ext_resource type="Texture2D" uid="uid://qfcrmkbfp0lv" path="res://assets/tileset/menu.png" id="1_0nkfx"]
 [ext_resource type="Texture2D" uid="uid://b2o0sag1vbc37" path="res://assets/tileset/tileset_level_11.png" id="1_j72vg"]
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_wx75x"]
 [ext_resource type="PackedScene" uid="uid://b2wetb2xeavl5" path="res://escenas/player.tscn" id="2_xpsgd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_31edq"]
@@ -137,6 +138,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_wx75x")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 texture_filter = 1
@@ -198,6 +200,6 @@ text = "EMA"
 [node name="Player_1" parent="." instance=ExtResource("2_xpsgd")]
 position = Vector2(293, 170)
 
-[connection signal="pressed" from="AMI" to="Player_1" method="_on_ami_pressed"]
-[connection signal="pressed" from="MATI" to="Player_1" method="_on_mati_pressed"]
-[connection signal="pressed" from="EMA" to="Player_1" method="_on_ema_pressed"]
+[connection signal="pressed" from="AMI" to="." method="_on_ami_pressed"]
+[connection signal="pressed" from="MATI" to="." method="_on_mati_pressed"]
+[connection signal="pressed" from="EMA" to="." method="_on_ema_pressed"]

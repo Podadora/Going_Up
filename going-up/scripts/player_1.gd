@@ -1,8 +1,10 @@
 extends CharacterBody2D
+@onready var dash = $Dash
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 var ACTUAL_JUMPS = 0
-const sprint_speed = normal_speed * 12
-const normal_speed = 400.0
+const sprint_speed = normal_speed * 10
+const sprint_dist = .1
+const normal_speed = 200.0
 const JUMP_VELOCITY = -400.0
 enum State {Idle, Run, Jump, Sprint}
 var current_state
@@ -17,7 +19,6 @@ func _physics_process(delta: float) -> void:
 	_jumping(delta)
 	_running(delta)
 	_animations(delta)
-	_sprint(delta)
 	move_and_slide() ## sinceramente no se que hace eso, si alguno sabe me avisa
 	
 ## Funcion para la gravedad
@@ -32,28 +33,22 @@ func _idle(delta: float) -> void:
 		
 ## Funcion para moverse
 func _running(delta:float) -> void:
+	if Input.is_action_just_pressed("sprint"):
+		dash.start_dash(sprint_dist)
+	var actual_speed = sprint_speed if dash.is_dashing() else normal_speed
 	var direction := Input.get_axis("ui_left", "ui_right")
 	if direction:
-		velocity.x = direction * normal_speed
+		velocity.x = direction * actual_speed
 	else:
-		velocity.x = move_toward(velocity.x, 0, normal_speed)
+		velocity.x = move_toward(velocity.x, 0, actual_speed)
 	if direction != 0 :
 		animated_sprite_2d.flip_h = false if direction > 0 else true
-		if is_on_floor():
+		if dash.is_dashing() :
+			current_state = State.Sprint
+		elif is_on_floor():
 			current_state = State.Run
-		else:
+		elif !is_on_floor():
 			current_state = State.Jump
-			
-## Funcion para sprintear
-func _sprint(delta:float) -> void:
-
-	if Input.is_action_just_pressed("sprint"):
-		current_state = State.Sprint
-		if animated_sprite_2d.flip_h :
-			velocity.x = -sprint_speed
-		else :
-			velocity.x = sprint_speed
-
 
 ## Funcion para saltos
 func _jumping(delta: float) -> void:
@@ -61,6 +56,7 @@ func _jumping(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 		current_state = State.Jump
 		ACTUAL_JUMPS = 1
+## Doble salto
 	elif Input.is_action_just_pressed("ui_up") and ACTUAL_JUMPS == 1:
 		velocity.y = JUMP_VELOCITY
 		ACTUAL_JUMPS += 1 
@@ -76,26 +72,3 @@ func _animations(delta: float) -> void:
 		animated_sprite_2d.play("sprint")
 	elif current_state == State.Idle:
 		animated_sprite_2d.play("idle")
-
-
-## aca cree 3 funciones, para variar los mapas que tenemos y  que practiquemos lo que necesitamos hacer con
-## los respectivos cambios que hagamos.
-## lo que hice fue: meter una señal de "pressed" en la ventana "Nodos" arriba a la derecha
-## esto envia una "señal" de que se presiono el boton a un script, en este caso, al player, podria ser el
-## nodo padre, pero se me hizo mas facil asi para hacerlo rapido, si lo quieren modificar no hay problema
-## seria agregarle un script al nodo padre y etc.
-
-func _on_ami_pressed() -> void:
-	get_tree().change_scene_to_file("res://escenas/ami.tscn")
-	pass # Replace with function body.
-
-
-func _on_mati_pressed() -> void:
-	get_tree().change_scene_to_file("res://escenas/mati.tscn")
-	pass # Replace with function body.
-
-
-
-func _on_ema_pressed() -> void:
-	get_tree().change_scene_to_file("res://escenas/level0.tscn")
-	pass # Replace with function body.
