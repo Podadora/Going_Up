@@ -1,0 +1,68 @@
+[gd_scene load_steps=13 format=3 uid="uid://mf2ox8enmj8p"]
+
+[ext_resource type="Script" path="res://scripts/shield.gd" id="1_owkxa"]
+[ext_resource type="Texture2D" uid="uid://b6vpaia5sy54s" path="res://assets/levels/Shield Sprite/Shield1.png" id="2_usa37"]
+[ext_resource type="Texture2D" uid="uid://drjaxeuikm00o" path="res://assets/levels/Shield Sprite/Shield2.png" id="3_yvcnv"]
+[ext_resource type="Texture2D" uid="uid://c143juxojapa1" path="res://assets/levels/Shield Sprite/Shield3.png" id="4_2ajm6"]
+[ext_resource type="Texture2D" uid="uid://5p518uyx6t12" path="res://assets/levels/Shield Sprite/Shield4.png" id="5_1a7so"]
+[ext_resource type="Texture2D" uid="uid://gcho452x78kb" path="res://assets/levels/Shield Sprite/Shield5.png" id="6_5ox2t"]
+[ext_resource type="Texture2D" uid="uid://bqg2mkdud7src" path="res://assets/levels/Shield Sprite/Shield6.png" id="7_fr060"]
+[ext_resource type="Texture2D" uid="uid://dns5lf8te4rb5" path="res://assets/levels/Shield Sprite/Shield7.png" id="8_teni8"]
+[ext_resource type="Texture2D" uid="uid://bee7gjkqeaw8c" path="res://assets/levels/Shield Sprite/Shield8.png" id="9_gkeh0"]
+[ext_resource type="Texture2D" uid="uid://dfhel1c7o1xpp" path="res://assets/levels/Shield Sprite/Shield9.png" id="10_yps0r"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_t6xf2"]
+a = Vector2(-14, -6)
+b = Vector2(10, -6)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ysewp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_usa37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_yvcnv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2ajm6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1a7so")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5ox2t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fr060")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_teni8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_gkeh0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_yps0r")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 6.0
+}]
+
+[node name="shield" type="Node2D"]
+script = ExtResource("1_owkxa")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-1.00649, -45.9562)
+rotation = -0.0663223
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2, 2)
+shape = SubResource("SegmentShape2D_t6xf2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+sprite_frames = SubResource("SpriteFrames_ysewp")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.775376

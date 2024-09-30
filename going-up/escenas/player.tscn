@@ -1,11 +1,15 @@
 [gd_scene load_steps=36 format=3 uid="uid://b2wetb2xeavl5"]
 
 [ext_resource type="Texture2D" uid="uid://c5mf2248su4q0" path="res://assets/player/player-idle.png" id="1_ojvst"]
-[ext_resource type="Script" path="res://scripts/player_1.gd" id="1_vscct"]
+[ext_resource type="Script" path="res://scripts/Player.gd" id="1_vscct"]
 [ext_resource type="Texture2D" uid="uid://eenxl8lbii0e" path="res://assets/player/player-run.png" id="2_o54rv"]
 [ext_resource type="Texture2D" uid="uid://b48r1vofhujxk" path="res://assets/player/player-jump.png" id="3_a83g6"]
 [ext_resource type="Texture2D" uid="uid://dq7dyciebx0ok" path="res://assets/player/player-stand.png" id="3_ow2k7"]
 [ext_resource type="PackedScene" uid="uid://6gxaba7jmdnl" path="res://escenas/dash.tscn" id="6_ayaec"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3ovft"]
+radius = 6.0
+height = 36.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_do3m1"]
 atlas = ExtResource("1_ojvst")
@@ -224,24 +228,20 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3ovft"]
-radius = 6.0
-height = 36.0
-
-[node name="Player_1" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Personaje"]]
 collision_layer = 2
 script = ExtResource("1_vscct")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -24)
-sprite_frames = SubResource("SpriteFrames_ejwjw")
-animation = &"sprint"
-autoplay = "idle"
-frame_progress = 0.671011
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, -18)
 shape = SubResource("CapsuleShape2D_3ovft")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(3, -25)
+sprite_frames = SubResource("SpriteFrames_ejwjw")
+animation = &"sprint"
+autoplay = "idle"
+frame_progress = 0.671011
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -249,3 +249,4 @@ shape = SubResource("CapsuleShape2D_3ovft")
 one_shot = true
 
 [node name="Dash" parent="." instance=ExtResource("6_ayaec")]
+position = Vector2(1, 2)

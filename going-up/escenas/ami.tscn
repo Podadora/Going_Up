@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=4 uid="uid://bp1cx4b3nutcj"]
+[gd_scene load_steps=10 format=4 uid="uid://bp1cx4b3nutcj"]
 
 [ext_resource type="Texture2D" uid="uid://bgvk3weoda3fn" path="res://assets/tileset/simple.png" id="1_e86uu"]
 [ext_resource type="PackedScene" uid="uid://b2wetb2xeavl5" path="res://escenas/player.tscn" id="2_qmys4"]
-[ext_resource type="PackedScene" uid="uid://dknirpi2iepn" path="res://escenas/Blaster.tscn" id="3_1l228"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_abstj"]
 tile_data = PackedInt32Array(0, 131072, 0, 1, 131072, 0, 2, 131072, 0)
@@ -87,12 +86,8 @@ tile_map_data = PackedByteArray("AAAAAP7/AAABAAEAAAAAAP//AAACAAAAAAABAP//AAACAAA
 tile_set = SubResource("TileSet_4mm56")
 
 [node name="player" parent="." instance=ExtResource("2_qmys4")]
-position = Vector2(156, -327)
+position = Vector2(-33, -53)
 
 [node name="Camera2D2" type="Camera2D" parent="player"]
+position = Vector2(4, -7)
 zoom = Vector2(3, 3)
-
-[node name="Interacciones" type="Node2D" parent="."]
-
-[node name="Coin" parent="Interacciones" instance=ExtResource("3_1l228")]
-position = Vector2(183, -321)

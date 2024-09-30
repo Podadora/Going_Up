@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://dknirpi2iepn"]
 
 [ext_resource type="Texture2D" uid="uid://bsawv5yyc31y2" path="res://assets/levels/Coin Sprite/Coin1.png" id="1_4hm3h"]
-[ext_resource type="Script" path="res://scripts/coin.gd" id="1_ho53k"]
+[ext_resource type="Script" path="res://scripts/shield.gd" id="1_ho53k"]
 [ext_resource type="Texture2D" uid="uid://bxu1dqid52ybx" path="res://assets/levels/Coin Sprite/Coin2.png" id="2_tb2s0"]
 [ext_resource type="Texture2D" uid="uid://cuk8f37bjx0yk" path="res://assets/levels/Coin Sprite/Coin3.png" id="3_peqfy"]
 [ext_resource type="Texture2D" uid="uid://dry8xsureps70" path="res://assets/levels/Coin Sprite/Coin4.png" id="4_ceclg"]

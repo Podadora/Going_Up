@@ -1,3 +1,4 @@
+class_name Personaje
 extends CharacterBody2D
 @onready var dash = $Dash
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
@@ -8,6 +9,10 @@ const normal_speed = 200.0
 const JUMP_VELOCITY = -400.0
 enum State {Idle, Run, Jump, Sprint}
 var current_state
+var preShield = preload("res://escenas/shield.tscn")
+var OrbeAbsorbido = false
+var shieldInUse = true
+		
 
 func _ready() -> void:
 	current_state = State.Idle
@@ -20,6 +25,8 @@ func _physics_process(delta: float) -> void:
 	_running(delta)
 	_animations(delta)
 	move_and_slide() ## sinceramente no se que hace eso, si alguno sabe me avisa
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
+		defense()
 	
 ## Funcion para la gravedad
 func _gravedad(delta: float) -> void:
@@ -72,3 +79,20 @@ func _animations(delta: float) -> void:
 		animated_sprite_2d.play("sprint")
 	elif current_state == State.Idle:
 		animated_sprite_2d.play("idle")
+
+func defense():
+	if shieldInUse:
+		var shield = preShield.instantiate()
+		add_child(shield)
+		
+		
+pass
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group("Personaje"):
+		OrbeAbsorbido = false
+		area.queue_free()
+		print("orbe absorbido")
+		
+	
+	pass # Replace with function body.

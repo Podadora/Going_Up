@@ -1,0 +1,55 @@
+[gd_scene load_steps=11 format=3 uid="uid://b5h5vrnbcj6j3"]
+
+[ext_resource type="Script" path="res://scripts/bola.gd" id="1_26d0l"]
+[ext_resource type="Texture2D" uid="uid://bsawv5yyc31y2" path="res://assets/levels/Coin Sprite/Coin1.png" id="2_c3gju"]
+[ext_resource type="Texture2D" uid="uid://bxu1dqid52ybx" path="res://assets/levels/Coin Sprite/Coin2.png" id="3_jtckk"]
+[ext_resource type="Texture2D" uid="uid://cuk8f37bjx0yk" path="res://assets/levels/Coin Sprite/Coin3.png" id="4_q21vg"]
+[ext_resource type="Texture2D" uid="uid://dry8xsureps70" path="res://assets/levels/Coin Sprite/Coin4.png" id="5_jvvpv"]
+[ext_resource type="Texture2D" uid="uid://cbwkl7nhgww0g" path="res://assets/levels/Coin Sprite/Coin5.png" id="6_50bjq"]
+[ext_resource type="Texture2D" uid="uid://5lwrgw3yhfkt" path="res://assets/levels/Coin Sprite/Coin6.png" id="7_srh1d"]
+[ext_resource type="Texture2D" uid="uid://cn6cgg2uoqgv5" path="res://assets/levels/Coin Sprite/Coin7.png" id="8_ugujp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k5ehl"]
+radius = 8.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_85j0i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_c3gju")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jtckk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_q21vg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jvvpv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_50bjq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_srh1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ugujp")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="bola" type="Area2D" groups=["Personaje"]]
+script = ExtResource("1_26d0l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_k5ehl")
+
+[node name="animacion" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_85j0i")
+animation = &"idle"
+autoplay = "idle"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
