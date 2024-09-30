@@ -11,7 +11,7 @@ enum State {Idle, Run, Jump, Sprint}
 var current_state
 var preShield = preload("res://escenas/shield.tscn")
 var OrbeAbsorbido = false
-var shieldInUse = true
+var NumbersOfShields = 1
 		
 
 func _ready() -> void:
@@ -25,8 +25,9 @@ func _physics_process(delta: float) -> void:
 	_running(delta)
 	_animations(delta)
 	move_and_slide() ## sinceramente no se que hace eso, si alguno sabe me avisa
-	if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT) and NumbersOfShields > 0:
 		defense()
+		
 	
 ## Funcion para la gravedad
 func _gravedad(delta: float) -> void:
@@ -81,9 +82,9 @@ func _animations(delta: float) -> void:
 		animated_sprite_2d.play("idle")
 
 func defense():
-	if shieldInUse:
 		var shield = preShield.instantiate()
 		add_child(shield)
+		NumbersOfShields -= 1
 		
 		
 pass
